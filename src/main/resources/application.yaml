@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: financetrack
+
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=LOGINDB;encrypt=false;trustServerCertificate=true
+    username: GIOVADB
+    password: Password@123
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+
+    hibernate:
+      ddl-auto: validate
+
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: AppLogin
+        dialect: org.hibernate.dialect.SQLServerDialect
+
+jwt:
+  secret: 9fA2xL8pQ7mV3kR1zN6wT4yB5cD8eF0hJ2sK9uP1qW3rX5tY7vC4nM6aS8dG1hL
+  expiration: 86400000
+
+cors:
+  allowed-origins: http://localhost:5173
+
+server:
+  port: 8080
