@@ -54,7 +54,6 @@ spring:
       hibernate:
         format_sql: true
         default_schema: AppLogin
-        dialect: org.hibernate.dialect.SQLServerDialect
 
 jwt:
   secret: ${JWT_SECRET}
